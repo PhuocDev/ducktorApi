@@ -21,20 +21,17 @@
   ]
 
 ## GET: localhost:8080/ducktor/search
-- Example http://localhost:8080/ducktor/details?url=https://api.nhs.uk/conditions/mouth-ulcers/
+- Example http://localhost:8080/ducktor/details?url=https://api.nhs.uk/conditions/anal-cancer/
 - RequestParam: url
 - Respond example:
   ```
-  [
-    {
-    "name": "Legionnaires' disease",
-    "description": "Read about Legionnaires' disease, an uncommon but serious lung infection you can get from inhaling droplets of water that contains Legionella bacteria.",
-    "url": "https://api.nhs.uk/conditions/legionnaires-disease/"
-    },
-    {
-    "name": "Leg cramps",
-    "description": "Read about leg cramps, a common condition where the muscles in the leg suddenly become tight and painful.",
-    "url": "https://api.nhs.uk/conditions/leg-cramps/"
-    }
-  ]
+  {
+    "name": "Anal cancer",
+    "overview": "Anal cancer is a rare type of cancer that affects the anus (where your bowel connects to the outside of your body).",
+    "symptoms": "Symptoms of anal cancer include bleeding, discharge, lumps and itching inside and outside the anus.",
+    "cause": "Most anal cancers are caused by human papillomavirus (HPV). HPV is a common virus you can get from sex or skin-to-skin contact of the genital area.",
+    "treatment": "Anal cancer can usually be treated with chemotherapy, radiotherapy or surgery, depending on the size of the cancer and how far it has spread.",
+    "diagnosis": "To check for anal cancer, you may have a test where a thin tube with a camera is put into your bottom and a small sample from your anus is removed.",
+    "prevention": "It’s not always possible to prevent anal cancer. Having the HPV vaccine, using a condom during sex and quitting smoking may help."
+  }
 
