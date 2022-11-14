@@ -16,7 +16,8 @@ public class TopLinkService {
 
         JSONArray significantLinks = jsonObject.getJSONArray("significantLink");
         System.out.println("Number of significantLinks: " + significantLinks.length());
-        for (int i = 0; i < significantLinks.length(); i++) {
+        //Get less than 5 links
+        for (int i = 0; i < (Math.min(significantLinks.length(), 4)); i++) {
             TopLink topLink = new TopLink();
             topLink.setName(((JSONObject) significantLinks.get(i)).getString("name"));
             topLink.setDescription(((JSONObject) significantLinks.get(i)).getString("description"));
