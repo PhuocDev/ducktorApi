@@ -6,6 +6,7 @@
 - Example: localhost:8080/ducktor/search?category=anal
 - RequestParam: category
 - Respond example:
+  ```
   [
     {
     "name": "Mouth ulcers",
@@ -23,7 +24,8 @@
 - Example http://localhost:8080/ducktor/details?url=https://api.nhs.uk/conditions/mouth-ulcers/
 - RequestParam: url
 - Respond example:
-  - [
+  ```
+  [
     {
     "name": "Legionnaires' disease",
     "description": "Read about Legionnaires' disease, an uncommon but serious lung infection you can get from inhaling droplets of water that contains Legionella bacteria.",
@@ -34,5 +36,5 @@
     "description": "Read about leg cramps, a common condition where the muscles in the leg suddenly become tight and painful.",
     "url": "https://api.nhs.uk/conditions/leg-cramps/"
     }
-    ]
+  ]
 
