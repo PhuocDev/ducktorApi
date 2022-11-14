@@ -20,7 +20,7 @@
     }
   ]
 
-## GET: localhost:8080/ducktor/search
+## GET: localhost:8080/ducktor/details
 - Example http://localhost:8080/ducktor/details?url=https://api.nhs.uk/conditions/anal-cancer/
 - RequestParam: url
 - Respond example:
