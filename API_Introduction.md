@@ -1,5 +1,5 @@
 
-#Các sử dụng DucktorBE API
+# Các sử dụng DucktorBE API
 
 ## GET: localhost:8080/ducktor/search
 
@@ -7,18 +7,20 @@
 - RequestParam: category
 - Respond example:
   ```
-  [
-    {
-    "name": "Mouth ulcers",
-    "description": "Find out about mouth ulcers, including what they look like, what causes them, how to treat them, and how to avoid getting them.",
-    "url": "https://api.nhs.uk/conditions/mouth-ulcers/"
-    },
-    {
-    "name": "Mouth cancer",
-    "description": "Read about mouth cancer, also known as oral cancer, including information about symptoms, types, causes, treatment, possible complications and reducing the risks.",
-    "url": "https://api.nhs.uk/conditions/mouth-cancer/"
-    }
-  ]
+  {
+    "significantLink": [
+        {
+            "name": "Mouth ulcers",
+            "description": "Find out about mouth ulcers, including what they look like, what causes them, how to treat them, and how to avoid getting them.",
+            "url": "https://api.nhs.uk/conditions/mouth-ulcers/"
+        },
+        {
+            "name": "Mouth cancer",
+            "description": "Read about mouth cancer, also known as oral cancer, including information about symptoms, types, causes, treatment, possible complications and reducing the risks.",
+            "url": "https://api.nhs.uk/conditions/mouth-cancer/"
+        }
+    ]
+  }
 
 ## GET: localhost:8080/ducktor/details
 - Example http://localhost:8080/ducktor/details?url=https://api.nhs.uk/conditions/anal-cancer/

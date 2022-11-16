@@ -1,6 +1,7 @@
 package com.example.docktor_mobile.controllers;
 
 import com.example.docktor_mobile.models.Desease;
+import com.example.docktor_mobile.models.SignificantLink;
 import com.example.docktor_mobile.models.TopLink;
 import com.example.docktor_mobile.services.DeseaseService;
 import com.example.docktor_mobile.services.TopLinkService;
@@ -23,17 +24,17 @@ public class MainController {
     DeseaseService deseaseService;
 
     @GetMapping("/search")
-    public ArrayList<TopLink> getTopLinksWithKeyword(@RequestParam String category) {
-        ArrayList<TopLink> topLinks = new ArrayList<>();
+    public SignificantLink getTopLinksWithKeyword(@RequestParam String category) {
+        SignificantLink significantLink = new SignificantLink();
 
         String uri = "https:"+"//ap"+"i.nhs.u"+"k/cond" + "itions/"+"?category=" + category + "&gen"+"re=condition&subs"+"cription-key=4d5efa5"+"f571f4c4abed9f546d9e2ab81";
         RestTemplate restTemplate = new RestTemplate();
         //get Json from api
         String jsonObject = restTemplate.getForObject(uri, String.class);
 
-        topLinks = topLinkService.getLinksFromJson(jsonObject);
+        significantLink.setSignificantLink(topLinkService.getLinksFromJson(jsonObject));
 
-        return topLinks;
+        return significantLink;
     }
 
     @GetMapping("/details")
